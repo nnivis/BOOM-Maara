@@ -6,7 +6,7 @@ namespace BOOM
 {
     public class EnemyMovementComponent : MonoBehaviour
     {
-        float _speed = 0.01f;
+        float _speed = 0.1f;
 
         public void Move(GameObject targetPosition)
         {
