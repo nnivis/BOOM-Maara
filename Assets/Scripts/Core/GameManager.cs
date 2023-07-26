@@ -9,7 +9,7 @@ namespace BOOM
     {
         static GameManager instance;
         public static GameManager Instance => instance;
-        List<HeathComponent> healthComponents = new List<HeathComponent>();
+        List<HealthComponent> healthComponents = new List<HealthComponent>();
 
         void Awake()
         {
@@ -23,14 +23,14 @@ namespace BOOM
             }
         }
 
-        public void RegisterHealthComponent(HeathComponent healthComponent)
+        public void RegisterHealthComponent(HealthComponent healthComponent)
         {
             healthComponents.Add(healthComponent);
             healthComponent.OnDead += OnDeath;
             healthComponent.OnDamage += OnDamage;
         }
 
-        public void UnregisterHealthComponent(HeathComponent healthComponent)
+        public void UnregisterHealthComponent(HealthComponent healthComponent)
         {
             healthComponents.Remove(healthComponent);
             healthComponent.OnDead -= OnDeath;

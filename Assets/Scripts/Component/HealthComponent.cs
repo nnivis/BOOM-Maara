@@ -5,7 +5,7 @@ using System;
 
 namespace BOOM
 {
-    public class HeathComponent : MonoBehaviour
+    public class HealthComponent : MonoBehaviour
     {
         float _health;
         [SerializeField] float _maxHealth = 80;

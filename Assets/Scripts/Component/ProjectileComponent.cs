@@ -27,7 +27,7 @@ namespace BOOM
         void OnCollisionEnter2D(Collision2D other)
         {
 
-            var heath = other.gameObject.GetComponent<HeathComponent>();
+            var heath = other.gameObject.GetComponent<HealthComponent>();
             if (heath)
             {
                 heath.TakeDamage(_damage);
