@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BOOM
 {
-    public class MainMenuState : MonoBehaviour
+    public class MainMenuState : MonoBehaviour, IStates
     {
         StateManager _stateManager;
         public void Begin(StateManager stateManager)
@@ -17,7 +17,7 @@ namespace BOOM
         {
             gameObject.SetActive(false);
         }
-        public void OnBackButtonClicked()
+        public void OnGameButtonClicked()
         {
             _stateManager.ChangeState(UIState.GAME);
         }

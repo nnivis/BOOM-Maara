@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BOOM
 {
-    public class GameOverState : MonoBehaviour
+    public class GameOverState : MonoBehaviour, IStates
     {
 
         StateManager _stateManager;
