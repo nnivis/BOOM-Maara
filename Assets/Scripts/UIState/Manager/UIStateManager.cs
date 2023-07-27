@@ -1,11 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BOOM
 {
-    public class UIStateManager : StateManager
+    public class UIStateManager : StateManager, IGameObserver
     {
         UIState _activeUIState = UIState.MAINMENU;
 
@@ -14,13 +12,26 @@ namespace BOOM
             base.Awake();
             LoadUIPanels();
             ChangeState(UIState.MAINMENU);
-
         }
+
+        void Start()
+        {
+            GameManager.Instance.RegisterDeathListener(this);
+        }
+
         public override void ChangeState(Enum nextState)
         {
             stateList[(int)_activeUIState].Exit();
-            _activeUIState = (UIState)nextState;
+            this._activeUIState = (UIState)nextState;
             stateList[(int)_activeUIState].Begin(this);
+        }
+
+        public void OnDeath(GameObject gameObject)
+        {
+            if (gameObject.CompareTag("Character"))
+            {
+                ChangeState(UIState.GAMEOVER);
+            }
         }
     }
 }

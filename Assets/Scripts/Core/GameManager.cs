@@ -9,7 +9,8 @@ namespace BOOM
     {
         static GameManager instance;
         public static GameManager Instance => instance;
-        List<HealthComponent> healthComponents = new List<HealthComponent>();
+        List<HealthComponent> _healthComponents = new List<HealthComponent>();
+        List<IGameObserver> _deathListeners = new List<IGameObserver>();
 
         void Awake()
         {
@@ -25,27 +26,39 @@ namespace BOOM
 
         public void RegisterHealthComponent(HealthComponent healthComponent)
         {
-            healthComponents.Add(healthComponent);
+            _healthComponents.Add(healthComponent);
             healthComponent.OnDead += OnDeath;
             healthComponent.OnDamage += OnDamage;
         }
 
         public void UnregisterHealthComponent(HealthComponent healthComponent)
         {
-            healthComponents.Remove(healthComponent);
+            _healthComponents.Remove(healthComponent);
             healthComponent.OnDead -= OnDeath;
             healthComponent.OnDamage -= OnDamage;
         }
 
+        public void RegisterDeathListener(IGameObserver listener)
+        {
+            _deathListeners.Add(listener);
+        }
+
+        public void UnregisterDeathListener(IGameObserver listener)
+        {
+            _deathListeners.Remove(listener);
+        }
 
         public void OnDeath(GameObject gameObject)
         {
             Destroy(gameObject);
+            foreach (var listener in _deathListeners)
+            {
+                listener.OnDeath(gameObject);
+            }
         }
 
         public void OnDamage()
         {
-            Debug.Log(" Player damaged! Damage: " );
         }
 
 

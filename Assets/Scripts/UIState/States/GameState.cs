@@ -10,14 +10,17 @@ namespace BOOM
         StateManager _stateManager;
         public void Begin(StateManager stateManager)
         {
-            _stateManager = stateManager;
-            gameObject.SetActive(true);
+            this._stateManager = stateManager;
+            this.gameObject.SetActive(true);
         }
 
         public void Exit()
         {
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
         }
-
+        public void OnBackButtonClicked()
+        {
+            this._stateManager.ChangeState(UIState.GAMEOVER);
+        }
     }
 }
