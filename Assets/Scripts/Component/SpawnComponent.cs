@@ -7,6 +7,7 @@ namespace BOOM
     public class SpawnComponent : MonoBehaviour
     {
         GameObject _enemyPrefab;
+        GameObject _characterPrefab;
         int _enemyNumber = 6;
         float _spawnRadius = 30f;
         float _timeSpawns = 1f;
@@ -14,18 +15,23 @@ namespace BOOM
         bool _spawn = true;
 
 
-        public void SetSpawnInfo(GameObject enemyPrefab)
+        public void SetSpawnInfo(GameObject enemyPrefab, GameObject characterPrefab)
         {
             _enemyPrefab = enemyPrefab;
+            _characterPrefab = characterPrefab;
         }
 
         public void StartSpawning()
         {
-            StartCoroutine(Spawn());
+            StartCoroutine(SpawnEnemy());
+            SpawnCharacter();
         }
 
-
-        IEnumerator Spawn()
+        void SpawnCharacter()
+        {
+            var character = Instantiate(_characterPrefab, transform.position, Quaternion.identity);
+        }
+        IEnumerator SpawnEnemy()
         {
 
             while (_spawn)

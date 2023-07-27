@@ -12,6 +12,8 @@ namespace BOOM
         List<HealthComponent> _healthComponents = new List<HealthComponent>();
         List<IGameObserver> _deathListeners = new List<IGameObserver>();
 
+        EnemyManager _enemyManager;
+
         void Awake()
         {
             if (instance == null)
@@ -22,6 +24,8 @@ namespace BOOM
             {
                 Destroy(gameObject);
             }
+
+            _enemyManager = GetComponent<EnemyManager>();
         }
 
         public void RegisterHealthComponent(HealthComponent healthComponent)
@@ -29,6 +33,11 @@ namespace BOOM
             _healthComponents.Add(healthComponent);
             healthComponent.OnDead += OnDeath;
             healthComponent.OnDamage += OnDamage;
+
+            if (healthComponent.CompareTag("Enemy"))
+            {
+                _enemyManager.RegisterEnemy(healthComponent.gameObject); // n.g
+            }
         }
 
         public void UnregisterHealthComponent(HealthComponent healthComponent)
@@ -36,6 +45,11 @@ namespace BOOM
             _healthComponents.Remove(healthComponent);
             healthComponent.OnDead -= OnDeath;
             healthComponent.OnDamage -= OnDamage;
+
+            if (healthComponent.CompareTag("Enemy"))
+            {
+                _enemyManager.UnregisterEnemy(healthComponent.gameObject); // n.g
+            }
         }
 
         public void RegisterDeathListener(IGameObserver listener)
@@ -60,7 +74,10 @@ namespace BOOM
         public void OnDamage()
         {
         }
-
+        public void EndGame()
+        {
+            _enemyManager.RemoveAllEnemies();
+        }
 
     }
 }

@@ -31,6 +31,11 @@ namespace BOOM
             {
                 OnDead?.Invoke(gameObject);
             }
+
+            if(gameObject.CompareTag("Character"))
+            {
+                Debug.Log("hello-hello ");
+            }
         }
 
     }

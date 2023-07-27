@@ -10,7 +10,7 @@ namespace BOOM
         [SerializeField] Rigidbody2D _rigidbody2D;
         float _force = 55f;
 
-        [SerializeField]float _damage = 1f;
+        [SerializeField] float _damage = 1f;
 
         void Start()
         {
@@ -26,14 +26,17 @@ namespace BOOM
 
         void OnCollisionEnter2D(Collision2D other)
         {
-
-            var heath = other.gameObject.GetComponent<HealthComponent>();
-            if (heath)
+            if (other.gameObject.CompareTag("Enemy"))
             {
-                heath.TakeDamage(_damage);
-            }
 
-            Destroy(gameObject);
+                var heath = other.gameObject.GetComponent<HealthComponent>();
+                if (heath)
+                {
+                    heath.TakeDamage(_damage);
+                }
+
+                Destroy(gameObject);
+            }
 
         }
     }

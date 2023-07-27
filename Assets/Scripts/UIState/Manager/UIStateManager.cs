@@ -31,6 +31,7 @@ namespace BOOM
             if (gameObject.CompareTag("Character"))
             {
                 ChangeState(UIState.GAMEOVER);
+                GameManager.Instance.EndGame();
             }
         }
     }

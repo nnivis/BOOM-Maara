@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3341285606874152583}
   - component: {fileID: -500092197632219610}
   - component: {fileID: -2105871821283659283}
+  - component: {fileID: -4788849425776168342}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: -500092197632219610}
+  _damage: 1
 --- !u!50 &-500092197632219610
 Rigidbody2D:
   serializedVersion: 4
@@ -137,3 +139,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 0.99999994}
   m_Direction: 0
+--- !u!114 &-4788849425776168342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693811991341936795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658f6a1ce0c6f1c4e9f5bf2c97a3e6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delay: 5
