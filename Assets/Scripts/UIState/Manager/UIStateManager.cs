@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BOOM
 {
-    public class UIStateManager : StateManager, IGameObserver
+    public class UIStateManager : StateManager, ICharacterDeathObserver
     {
         UIState _activeUIState = UIState.MAINMENU;
 
@@ -28,11 +28,10 @@ namespace BOOM
 
         public void OnDeath(GameObject gameObject)
         {
-            if (gameObject.CompareTag("Character"))
-            {
-                ChangeState(UIState.GAMEOVER);
-                GameManager.Instance.EndGame();
-            }
+
+            ChangeState(UIState.GAMEOVER);
+            GameManager.Instance.EndGame();
+
         }
     }
 }

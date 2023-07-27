@@ -28,14 +28,12 @@ namespace BOOM
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-
                 var heath = other.gameObject.GetComponent<HealthComponent>();
                 if (heath)
                 {
                     heath.TakeDamage(_damage);
+                    Destroy(gameObject);
                 }
-
-                Destroy(gameObject);
             }
 
         }

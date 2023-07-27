@@ -11,6 +11,9 @@ namespace BOOM
         FollowComponent _followComponent;
         SkillController _skillController;
 
+         bool _shootButtonExecuted = false;
+
+
         void Awake()
         {
             _shootButtonAction = _inputActionAssets.FindAction("Shoot");
@@ -34,7 +37,7 @@ namespace BOOM
 
         void Update()
         {
-            if (_shootButtonAction.WasPerformedThisFrame())
+            if (_shootButtonAction.WasPressedThisFrame())
             {
                 _skillController.DefaultSkill();
             }

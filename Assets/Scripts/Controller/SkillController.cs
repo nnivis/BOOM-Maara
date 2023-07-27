@@ -7,6 +7,8 @@ namespace BOOM
         float _rateDefaultSkill = 0.5f;
         float _nextDefaultSkill = 0.0f;
 
+        
+
         AttackComponent _attackComponent;
 
         void Start()

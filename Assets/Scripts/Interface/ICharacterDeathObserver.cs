@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace BOOM
 {
-    public interface IGameObserver
+    public interface ICharacterDeathObserver
     {
         void OnDeath(GameObject gameObject);
     }

@@ -28,13 +28,8 @@ namespace BOOM
             OnDamage?.Invoke();
 
             if (_health == 0)
-            {
+            {              
                 OnDead?.Invoke(gameObject);
-            }
-
-            if(gameObject.CompareTag("Character"))
-            {
-                Debug.Log("hello-hello ");
             }
         }
 

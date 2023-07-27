@@ -10,9 +10,11 @@ namespace BOOM
         static GameManager instance;
         public static GameManager Instance => instance;
         List<HealthComponent> _healthComponents = new List<HealthComponent>();
-        List<IGameObserver> _deathListeners = new List<IGameObserver>();
+        List<ICharacterDeathObserver> _deathCharacterListeners = new List<ICharacterDeathObserver>();
+        List<IEnemyDeathObserver> _deathEnemyListeners = new List<IEnemyDeathObserver>();
 
         EnemyManager _enemyManager;
+        ScoreController _scoreController;
 
         void Awake()
         {
@@ -24,8 +26,12 @@ namespace BOOM
             {
                 Destroy(gameObject);
             }
+        }
 
+        void Start()
+        {
             _enemyManager = GetComponent<EnemyManager>();
+            _scoreController = GetComponent<ScoreController>();
         }
 
         public void RegisterHealthComponent(HealthComponent healthComponent)
@@ -52,31 +58,55 @@ namespace BOOM
             }
         }
 
-        public void RegisterDeathListener(IGameObserver listener)
+        public void RegisterDeathListener(ICharacterDeathObserver listener)
         {
-            _deathListeners.Add(listener);
+            _deathCharacterListeners.Add(listener);
         }
 
-        public void UnregisterDeathListener(IGameObserver listener)
+        public void UnregisterDeathListener(ICharacterDeathObserver listener)
         {
-            _deathListeners.Remove(listener);
+            _deathCharacterListeners.Remove(listener);
+        }
+
+        public void RegisterEnemyDeathListener(IEnemyDeathObserver listener)
+        {
+            _deathEnemyListeners.Add(listener);
+        }
+
+        public void UnregisterEnemyDeathListener(IEnemyDeathObserver listener)
+        {
+            _deathEnemyListeners.Remove(listener);
         }
 
         public void OnDeath(GameObject gameObject)
         {
             Destroy(gameObject);
-            foreach (var listener in _deathListeners)
+
+            if (gameObject.CompareTag("Character"))
             {
-                listener.OnDeath(gameObject);
+                foreach (var listener in _deathCharacterListeners)
+                {
+                    listener.OnDeath(gameObject);
+                }
+            }
+
+            if (gameObject.CompareTag("Enemy"))
+            {
+                foreach (var listener in _deathEnemyListeners)
+                {
+                    listener.OnEnemyDeath();
+                }
             }
         }
 
         public void OnDamage()
         {
+
         }
         public void EndGame()
         {
             _enemyManager.RemoveAllEnemies();
+            _scoreController.ResetCurrentPoints();
         }
 
     }
