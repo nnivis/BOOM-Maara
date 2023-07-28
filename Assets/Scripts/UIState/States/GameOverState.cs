@@ -24,5 +24,10 @@ namespace BOOM
            this._stateManager.ChangeState(UIState.MAINMENU);
         }
 
+         public void OnBackRestartClicked()
+        {
+           this._stateManager.ChangeState(UIState.GAME);
+        }
+
     }
 }

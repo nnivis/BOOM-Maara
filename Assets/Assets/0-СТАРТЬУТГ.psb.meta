@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: 8e686bad076f68848acb151f1082d8de
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: GO
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1555
+      y: 1099
+      width: 140
+      height: 69
+    spriteID: ae4c00dc92e64b5449177361e0cd65dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1555, y: 1099}
+    spritePosition: {x: 895, y: 131}
+  - name: magenta-round-clean
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1031
+      y: 1212
+      width: 184
+      height: 176
+    spriteID: c1dd89da5a67b4a469860920416f4b28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1031, y: 1212}
+    spritePosition: {x: 868, y: 72}
+  - name: BOOM MAARA
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1031
+      y: 936
+      width: 516
+      height: 268
+    spriteID: 7c6cf7c99bf7fac4e9d0b22945388947
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1031, y: 936}
+    spritePosition: {x: 702, y: 539}
+  - name: kablam
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1037
+      height: 924
+    spriteID: b0be80431add5904fbe632cba021e3ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 441, y: 135}
+  - name: NIVIS
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1555
+      y: 936
+      width: 458
+      height: 155
+    spriteID: f118642e286564b47891e8ba18f965f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1555, y: 936}
+    spritePosition: {x: 210, y: 807}
+  - name: pink-arrow-sticky
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 936
+      width: 1019
+      height: 471
+    spriteID: 34aa590676c04ff4d995f2230e83116c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 936}
+    spritePosition: {x: 0, y: 609}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Group 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 7fc307970e082f04aade62c4a513daf7
+    layerID: 33
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: THIS IS  NOT A LOSS
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 055bbd0744e00924490b666694a6150b
+    layerID: 44
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: kablam
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e6a84d8aca8e11b4787a5f9c4014fb97
+    layerID: 31
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: I HAVE THOUSANDS OF LIVES
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e21f804fdcaf3d0428dddfd1b61ad61c
+    layerID: 45
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: pink-arrow-sticky
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 46b69de1acefa7a4f8830f1bb880843c
+    layerID: 35
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: GO
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d7c6a7d28984bbe4a942212f49010c55
+    layerID: 46
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: magenta-round-clean
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 48a8a84045dfc1c40ba18a8d154e47e1
+    layerID: 47
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Group 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d5354619960604b44bd9fe3797a8ca31
+    layerID: 28
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: GO
+    spriteName: GO
+    isGroup: 0
+    parentIndex: 7
+    spriteID: ae4c00dc92e64b5449177361e0cd65dc
+    layerID: 42
+    mosaicPosition: {x: 1555, y: 1099}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: magenta-round-clean
+    spriteName: magenta-round-clean
+    isGroup: 0
+    parentIndex: 7
+    spriteID: c1dd89da5a67b4a469860920416f4b28
+    layerID: 39
+    mosaicPosition: {x: 1031, y: 1212}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BOOM MAARA
+    spriteName: BOOM MAARA
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 7c6cf7c99bf7fac4e9d0b22945388947
+    layerID: 43
+    mosaicPosition: {x: 1031, y: 936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: kablam
+    spriteName: kablam
+    isGroup: 0
+    parentIndex: 7
+    spriteID: b0be80431add5904fbe632cba021e3ee
+    layerID: 40
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NIVIS
+    spriteName: NIVIS
+    isGroup: 0
+    parentIndex: 7
+    spriteID: f118642e286564b47891e8ba18f965f8
+    layerID: 41
+    mosaicPosition: {x: 1555, y: 936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pink-arrow-sticky
+    spriteName: pink-arrow-sticky
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 34aa590676c04ff4d995f2230e83116c
+    layerID: 22
+    mosaicPosition: {x: 4, y: 936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 2
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 04b3f07196fa1b140b24304f80d8d9a9
+    layerID: 14
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: 8ed9849930e0f035e9c09a8ae14ad9a6
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 82063096009b33e47994bdef33ae6e26
+    layerID: 4
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 3
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 122d462de50ffbc40b6ef88d5d0e4937
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 1
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 47176e040d5a4714ba207571bf93f76c
+    layerID: 2
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
