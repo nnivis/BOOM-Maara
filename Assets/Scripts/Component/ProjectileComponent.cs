@@ -20,7 +20,6 @@ namespace BOOM
         {
             Vector2 direction = transform.right;
             Vector2 movement = direction * _force;
-
             _rigidbody2D.AddForce(movement, ForceMode2D.Impulse);
         }
 
@@ -35,7 +34,6 @@ namespace BOOM
                     Destroy(gameObject);
                 }
             }
-
         }
     }
 }
